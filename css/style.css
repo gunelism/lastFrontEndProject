@@ -1,5 +1,25 @@
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  position: relative; }
+
+.scrollzero {
+  display: none; }
+
+.scrollzero1 {
+  padding: 3px 9px;
+  opacity: 0.3;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  z-index: 10;
+  bottom: 20px;
+  right: 20px;
+  background-color: black; }
+  .scrollzero1 i {
+    color: #20befa; }
+  .scrollzero1:hover {
+    transition: all 0.5s;
+    opacity: 1; }
 
 .head {
   margin-bottom: 0;
@@ -90,10 +110,10 @@ body {
     padding: 10px 25px;
     background: transparent;
     border: 1px solid white; }
-  #launch button:hover {
-    background-color: white;
-    color: #20befa;
-    transition: all 0.5s; }
+    #launch button:last-child:hover {
+      background-color: white;
+      color: #20befa;
+      transition: all 0.5s; }
 
 #logo {
   min-height: 125px;
@@ -247,28 +267,44 @@ body {
     transform: translateX(800px); }
 
 #lorem {
-  background-color: #f0f0f0; }
-  #lorem .row #lorem1 {
-    padding-bottom: 5%;
-    margin-top: 10%;
-    line-height: 2em; }
-    #lorem .row #lorem1 h4 {
-      color: #20befa;
-      font-weight: 600;
+  background: #F0F0F0; }
+  #lorem .section-content {
+    margin-top: 115px;
+    line-height: 25px; }
+    #lorem .section-content h4 {
+      color: #1AC6FF;
+      font-weight: 700;
+      text-transform: uppercase;
       font-size: 17px; }
-    #lorem .row #lorem1 p {
+    #lorem .section-content p {
+      color: #707070;
       font-size: 16px; }
-    #lorem .row #lorem1 .active3 {
-      background-color: #20befa;
-      color: white; }
-      #lorem .row #lorem1 .active3 h4 {
+    #lorem .section-content a {
+      text-decoration: none; }
+    #lorem .section-content .col {
+      padding: 7% 8%;
+      border-radius: 5px;
+      cursor: pointer;
+      overflow: hidden; }
+    #lorem .section-content .active4 {
+      background: #1AC6FF; }
+      #lorem .section-content .active4 h4, #lorem .section-content .active4 p {
         color: white; }
-  #lorem .row img {
-    margin-top: 5%; }
-  #lorem .komp {
-    transition: all 0.5s;
-    transform-origin: bottom;
-    transform: rotateX(91deg); }
+    #lorem .section-content .img {
+      position: relative; }
+      #lorem .section-content .img .img2, #lorem .section-content .img .img3 {
+        display: none; }
+      #lorem .section-content .img .img1 {
+        transition: all 0.2s linear;
+        transform: rotateX(88deg);
+        transform-origin: bottom; }
+      #lorem .section-content .img .img2 {
+        transition: all 0.2s linear;
+        transform: rotateY(88deg);
+        transform-origin: right; }
+      #lorem .section-content .img .img3 {
+        transition: all 0.2s linear;
+        transform: translate(600px); }
 
 #feature {
   overflow: hidden;
@@ -298,7 +334,8 @@ body {
   background-image: url("../img/01.jpg");
   background-attachment: fixed;
   background-size: cover;
-  color: white; }
+  color: white;
+  overflow: hidden; }
   #update h1 {
     font-size: 45px; }
   #update input {
@@ -313,6 +350,12 @@ body {
       transition: 0.8s;
       background-color: white;
       color: #20befa; }
+  #update .leftcome4 {
+    transition: all 0.5s;
+    transform: translateX(-750px); }
+  #update .rightcome4 {
+    transition: all 0.5s;
+    transform: translateX(900px); }
 
 #product {
   overflow: hidden; }
@@ -401,7 +444,8 @@ body {
     width: 70px; }
 
 #team {
-  padding: 30px 0; }
+  padding: 30px 0;
+  overflow: hidden; }
   #team h1 {
     font-size: 45px; }
   #team p {
@@ -411,6 +455,12 @@ body {
     padding-top: 8%; }
     #team .row:last-child h4 {
       color: #20befa; }
+  #team .team1, #team .team3 {
+    transform: translateY(-300px);
+    transition: all 0.1s; }
+  #team .team2, #team .team4 {
+    transform: translateY(300px);
+    transition: all 0.1s; }
 
 #footer1 {
   padding: 30px 0;

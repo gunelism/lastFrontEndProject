@@ -2,7 +2,7 @@
 jQuery(document).ready(function($) {
 	$x=true;
 	$('#top1').fadeIn(1000);
-	$(window).scroll(function() {
+	$(window).scroll(function() { 
 		// scroll ile animation-lar ishlemesi
   var scrollTop = $(window).scrollTop();
  	if(scrollTop>300){
@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
 	// }
 
  	}
- 	if (scrollTop>1100 ){
+ 	if (scrollTop>1100){
  		$('#trimg2').css("transform","translateX(-50px)")
  		$('#rightcome2').css("transform","translateX(50px)")
 
@@ -38,15 +38,20 @@ jQuery(document).ready(function($) {
  		$('#trimg3').css("transform","translateX(0px)"),
  		$('#rightcome3').css("transform","translateX(0px)")
  	}
- 	if (scrollTop>2500){
- 		 $('.komp').css("transform","rotateX(0deg)")
+ 	
+ 	if (scrollTop>2500) {
+			$('#lorem .img1').css('transform', 'rotateX(0deg)')
+		}
 
- 	}
  	if (scrollTop>3000){
  		$('.sagdan').css("transform","translateX(0px)"),
  		setTimeout(function (argument) {
  			  $('.soldan').css("transform","translateX(0px)")
  		},300)
+ 	}
+ 	if(scrollTop>3310){
+ 		$('.leftcome4').css("transform","translateX(0px)")
+ 		$('.rightcome4').css("transform","translateX(0px)")
  	}
  	if(scrollTop>3500){
  		$('.frombot').css("transform","translateY(0px)")
@@ -55,6 +60,25 @@ jQuery(document).ready(function($) {
  		 $('.frombot1').css("transform","translateY(0px)")
 
  	}
+ 	if (scrollTop>5300){
+ 		// $('.team1').css('display', 'block');
+ 		// $('.team3').css('display', 'block');
+ 		$('.team1').css("transform","translateX(0px)")
+
+ 		setTimeout(function (argument) {
+ 			  $('.team2').css("transform","translateX(0px)")
+ 		},100)
+ 		setTimeout(function (argument) {
+ 			  $('.team3').css("transform","translateX(0px)")
+ 		},200)
+ 		setTimeout(function (argument) {
+ 			  $('.team4').css("transform","translateX(0px)")
+ 		},300)
+
+
+
+ 	}
+
  	console.log(scrollTop);
  	// burda bitir scroll animation
 
@@ -62,9 +86,14 @@ jQuery(document).ready(function($) {
  	 if (scrollTop>600) {
 		 	$('nav').removeClass('head');
 		 	$('nav').addClass('head2');
+		 	$('#hello').removeClass('scrollzero');	
+		 	$('#hello').addClass('scrollzero1');
 		 }else{
 		 	$('nav').removeClass('head2');
 		 	$('nav').addClass('head');
+		 	$('#hello').removeClass('scrollzero1');	
+		 	$('#hello').addClass('scrollzero');
+
 		 }
 	
  
@@ -77,13 +106,23 @@ jQuery(document).ready(function($) {
 
  	});
 
+ 	//scrollzero button funksiyasinin ishlemesi. yeni scrollun 
+ 	//sifirlasnmasi ucun 
+ 	$('#hello').click(function() {
+ 		$(document).scrollTo('#launch',800);
+ 	});
+
+
+
+
+
 //tab section hissede her 3 duymeye aid funksiya ve animatinlarin ishe 
 //dushmesi. burada birinci button ucun baslayir
  			
 	$('.buttt').on('click',function(){
 		$('.buttt').removeClass('active');
 		$(this).addClass('active');
-		$
+		
 	})
 
  	$('.btn1').click(function(event) {
@@ -182,5 +221,47 @@ jQuery(document).ready(function($) {
 
  		
  	});
+
+	 $('#lorem .col').click(function() {
+	    $('#lorem .col').removeClass('active4');
+		$(this).addClass('active4');
+	});
+
+
+ 	 $('#colOne').click(function() {
+	 $('.img1').css('display', 'block');
+	   $('.img2').css('display', 'none');
+	   $('.img3').css('display', 'none');
+
+	   setTimeout(function (argument) {
+		 $('.img1').css('transform', 'rotateX(0deg)');
+		},10);
+		  $('.img2').css('transform', 'rotateY(88deg)');
+		  $('.img3').css('transform', 'translateX(600px)');
+	 });
+
+
+	 $('#colTwo').click(function() {
+	 	
+	   $('.img .img1').css('display', 'none');
+	    $('.img .img2').css('display', 'block');
+	   $('.img .img3').css('display', 'none');
+	    setTimeout(function (argument) {
+		 $('.img2').css('transform', 'rotateY(0deg)');
+		},10) 
+		$('.img1').css('transform', 'rotateX(88deg)');
+		$('.img3').css('transform', 'translateX(600px)');
+	 });
+
+	 $('#colThree').click(function() {
+	   $('.img .img1').css('display', 'none');
+	   $('.img .img2').css('display', 'none');
+	    $('.img .img3').css('display', 'block');
+	     setTimeout(function (argument) {
+		 $('.img3').css('transform', 'translateX(0px)');
+		},10) 
+	     $('.img1').css('transform', 'rotateX(88deg)');
+	     $('.img2').css('transform', 'rotateY(88deg)');
+	 });
 
 });
