@@ -38,6 +38,10 @@ jQuery(document).ready(function($) {
  		$('#trimg3').css("transform","translateX(0px)"),
  		$('#rightcome3').css("transform","translateX(0px)")
  	}
+ 	if (scrollTop>2500){
+ 		 $('.komp').css("transform","rotateX(0deg)")
+
+ 	}
  	if (scrollTop>3000){
  		$('.sagdan').css("transform","translateX(0px)"),
  		setTimeout(function (argument) {

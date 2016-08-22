@@ -403,7 +403,12 @@ body{
 		  		// position: absolute;
 		  		margin-top: 5%;
 		  	}
-}
+	}
+	.komp{
+		transition: all 0.5s;
+		transform-origin: bottom;
+		transform: rotateX(91deg);
+	}
 	  	// a{
 	  		// color: white;
 	  		// text-decoration: none;
