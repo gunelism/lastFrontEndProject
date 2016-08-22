@@ -49,7 +49,6 @@ jQuery(document).ready(function($) {
  		},300)
  	}
  	if(scrollTop>3500){
- 		// $('.fromtop').css("transform","translateX(0px)"),
  		$('.frombot').css("transform","translateY(0px)")
  	}
  	if (scrollTop>4250){
@@ -81,6 +80,12 @@ jQuery(document).ready(function($) {
 //tab section hissede her 3 duymeye aid funksiya ve animatinlarin ishe 
 //dushmesi. burada birinci button ucun baslayir
  			
+	$('.buttt').on('click',function(){
+		$('.buttt').removeClass('active');
+		$(this).addClass('active');
+		$
+	})
+
  	$('.btn1').click(function(event) {
 
 
@@ -113,6 +118,7 @@ jQuery(document).ready(function($) {
 
 //ikinci button bu hissede bashlayir
  	$('.btn2').click(function(event) {
+ 		
 
  		$('#rightcome').css('transform','translateX(800px)');
  		$('#trimg').css('transform','translateX(-800px)');
@@ -146,6 +152,8 @@ jQuery(document).ready(function($) {
  	
  //ucuncu button ise burada bashlayir
  	$('.btn3').click(function(event) {
+ 		
+
  		$('.first').css('display','none');
  		$('.second').css('display','none');
  		$('.third').css('display','block');
