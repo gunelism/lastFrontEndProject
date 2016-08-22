@@ -11,8 +11,8 @@ jQuery(document).ready(function($) {
  	}
  	if (scrollTop>600 && $x==true) {
 
- 		$('#trimg').css("transform","translateX(40px)"),
- 		$('#rightcome').css("transform","translateX(-40px)")
+ 		$('#trimg').css("transform","translateX(50px)"),
+ 		$('#rightcome').css("transform","translateX(-50px)")
 
  
 	// for (var i = 0; i < 1; i++) {
@@ -24,14 +24,35 @@ jQuery(document).ready(function($) {
 	// }
 
  	}
- 	if (scrollTop>1100) {
- 		$('#trimg2').css("transform","translateX(0px)"),
- 		$('#rightcome2').css("transform","translateX(0px)")
+ 	if (scrollTop>1100 ){
+ 		$('#trimg2').css("transform","translateX(-50px)")
+ 		$('#rightcome2').css("transform","translateX(50px)")
+
+ 	// 	$('#trimg2').animate({marginLeft:'-=50px'},"fast")
+		// $('#trimg2').animate({marginLeft:'+=50px'},'fast')
+		// $('#rightcome2').animate({marginLeft:'+=50px'},"fast")
+		// $('#rightcome2').animate({marginLeft:'-=50px'},'fast')
+		// $x=false;
  	}
  	if (scrollTop>1600) {
  		$('#trimg3').css("transform","translateX(0px)"),
  		$('#rightcome3').css("transform","translateX(0px)")
  	}
+ 	if (scrollTop>3000){
+ 		$('.sagdan').css("transform","translateX(0px)"),
+ 		setTimeout(function (argument) {
+ 			  $('.soldan').css("transform","translateX(0px)")
+ 		},300)
+ 	}
+ 	if(scrollTop>3500){
+ 		// $('.fromtop').css("transform","translateX(0px)"),
+ 		$('.frombot').css("transform","translateY(0px)")
+ 	}
+ 	if (scrollTop>4250){
+ 		 $('.frombot1').css("transform","translateY(0px)")
+
+ 	}
+ 	console.log(scrollTop);
  	// burda bitir scroll animation
 
  	//scroll ile navbarin gorunmesi

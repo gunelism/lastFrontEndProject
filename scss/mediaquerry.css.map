@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,yCAA0C;EAExC,UAAE;IACD,SAAS,EAAE,IAAI",
+"sources": ["mediaquerry.scss"],
+"names": [],
+"file": "mediaquerry.css"
+}
